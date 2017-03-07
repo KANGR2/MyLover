@@ -1,42 +1,111 @@
-a {
-  text-decoration: none; }
-
 * {
   padding: 0;
   margin: 0; }
 
 #box {
   width: 100%;
-  height: 1500px;
+  height: 3887px;
   border: solid 1px #000; }
 
 #logo {
   width: 100%;
   height: 125px;
   overflow: hidden; }
+  #logo img {
+    display: block; }
 
 #wrap {
-  width: 1000px;
-  height: 1370px;
+  width: 990px;
+  height: 3760px;
   margin: 0 auto;
   border: solid 1px #000; }
 
-#top ul {
-  width: 1000px;
-  height: 40px;
-  background: #000; }
-
-#top li {
-  float: left;
-  list-style: none;
-  width: 198px;
-  height: 40px;
-  border: solid 1px #000;
-  text-align: center;
-  line-height: 40px; }
+#top {
+  position: relative; }
+  #top ul {
+    width: 990px;
+    height: 40px;
+    background: #000; }
+    #top ul li {
+      float: left;
+      list-style: none;
+      width: 196px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px; }
+  #top .ziul {
+    width: 196px;
+    height: auto;
+    border: solid 1px #000;
+    position: absolute;
+    left: 392px;
+    top: 3px;
+    background: #142c6c;
+    display: none; }
+    #top .ziul li {
+      text-decoration: none;
+      width: 196px;
+      height: 40px;
+      border: solid 1px #000; }
+      #top .ziul li a {
+        color: red; }
 
 a {
   color: white;
+  text-decoration: none;
   font-weight: bolder; }
+
+#banner {
+  width: 990px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #000; }
+  #banner ul {
+    width: 3000px;
+    height: 500px;
+    position: absolute; }
+    #banner ul li {
+      width: 990px;
+      height: 500px;
+      float: left;
+      list-style: none; }
+
+#content {
+  width: 990px;
+  height: 2385px;
+  overflow: hidden; }
+  #content .contents {
+    width: 990px;
+    height: 1980px; }
+    #content .contents dl {
+      width: 970px;
+      height: 200px;
+      padding: 5px 0px 5px 20px;
+      margin-bottom: 5px;
+      border-bottom: solid 1px #ccc; }
+    #content .contents dt {
+      width: 710px;
+      height: 200px;
+      float: left; }
+    #content .contents p {
+      padding: 10px;
+      font-weight: bolder;
+      font-size: 16px; }
+    #content .contents dd {
+      width: 200px;
+      height: 200px;
+      float: right;
+      overflow: hidden; }
+      #content .contents dd img {
+        width: 200px;
+        height: 200px; }
+    #content .contents h2 {
+      text-align: center;
+      color: #142c6c; }
+    #content .contents h1 {
+      text-align: center;
+      color: #f4d713;
+      background: #142c6c; }
 
 /*# sourceMappingURL=zhuye.css.map */

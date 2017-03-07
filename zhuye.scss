@@ -4,8 +4,9 @@ $bigwidth:100%;
     float:left;
     list-style:none;
 }
-a{
+@mixin ashuxing{
     text-decoration:none;
+    font-weight:bolder;
 }
 *{
     padding:0;
@@ -13,37 +14,128 @@ a{
 }
 #box{
     width:$bigwidth;
-    height:1500px;
+    height:3887px;
     border:solid 1px #000;
-//    background:#000;
+ //   background:#000;
 }
 #logo{
     width:$bigwidth;
     height:125px;
     overflow:hidden;
+    img{
+        display:block;
+    }
 }
 #wrap{
-    width:1000px;
-    height:1370px;
+    width:990px;
+    height:3760px;
     margin:0 auto;
     border:solid 1px #000;
 }
-#top ul{
-    width:1000px;
-    height:40px;
-    background:#000;
-}
-#top li{
-    @include lishuxing;
-    width:198px;
-    height:40px;
-    border:solid 1px #000;
-    text-align:center;
-    line-height:40px;
- }
+#top{
+    position:relative;
+    ul{
+        width:990px;
+        height:40px;
+        background:#000;
+        
+        li{
+            @include lishuxing;
+            width:196px;
+            height:40px;
+            text-align:center;
+            line-height:40px;
+        }
+    }
+    .ziul{
+        width:196px;
+        height:auto;
+        border:solid 1px #000;
+        position:absolute;
+        left:392px;
+        top:3px;
+        background:#142c6c;
+        display:none;
+        li{
+            text-decoration:none;
+            width:196px;
+            height:40px;
+            border:solid 1px #000;
+            a{color:red;}
+        }
+    }
+} 
+//.fenlei:hover .ziul{
+//  display:block;
+//}
 a{
     color:white;
-    font-weight:bolder;
-    
-    
+    @include ashuxing;
 }
+
+//li:hover a{
+//          color:#074afd;
+//  }
+#banner{
+    width:990px;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+    border:solid 1px #000;
+    ul{
+        width:3000px;
+        height:500px;
+        position:absolute;
+        li{
+            width:990px;
+            height:500px;
+            @include lishuxing;
+        }
+    }
+}
+#content{
+    width:990px;
+    height:2385px;
+    overflow:hidden;
+    .contents{
+        width:990px;
+        height:1980px;
+        dl{
+            width:970px;
+            height:200px;
+            padding:5px 0px 5px 20px;
+            margin-bottom:5px;
+            border-bottom:solid 1px #ccc;
+        }
+        dt{
+            width:710px;
+            height:200px;
+            float:left;
+        }
+        p{
+            padding:10px;
+            font-weight:bolder;
+            font-size:16px;
+        }
+        dd{
+            width:200px;
+            height:200px;
+            float:right;
+            overflow:hidden;
+            img{
+                width:200px;
+                height:200px;
+            }
+        }
+        h2{
+            text-align:center;
+            color:#142c6c;
+        }
+        h1{
+            text-align:center;
+            color:#f4d713;
+            background:#142c6c;
+        }
+    }
+}
+
