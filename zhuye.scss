@@ -1,0 +1,49 @@
+@charset"utf-8";
+$bigwidth:100%;
+@mixin lishuxing{
+    float:left;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+*{
+    padding:0;
+    margin:0;
+}
+#box{
+    width:$bigwidth;
+    height:1500px;
+    border:solid 1px #000;
+//    background:#000;
+}
+#logo{
+    width:$bigwidth;
+    height:125px;
+    overflow:hidden;
+}
+#wrap{
+    width:1000px;
+    height:1370px;
+    margin:0 auto;
+    border:solid 1px #000;
+}
+#top ul{
+    width:1000px;
+    height:40px;
+    background:#000;
+}
+#top li{
+    @include lishuxing;
+    width:198px;
+    height:40px;
+    border:solid 1px #000;
+    text-align:center;
+    line-height:40px;
+ }
+a{
+    color:white;
+    font-weight:bolder;
+    
+    
+}
