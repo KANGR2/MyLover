@@ -17,40 +17,12 @@ $bigwidth:100%;
     height:3887px;
     background:#000;
 }
-#logo{
-    width:$bigwidth;
-    height:125px;
-    overflow:hidden;
-    img{
-        display:block;
-    }
-}
 #wrap{
     width:990px;
     height:3760px;
     margin:0 auto;
 }
-#top{
-    ul{
-        width:990px;
-        height:40px;
-        background:#000;
-        li{
-            @include lishuxing;
-            width:196px;
-            height:40px;
-            text-align:center;
-            line-height:40px;
-        }
-    }
-} 
-a{
-    color:white;
-    @include ashuxing;
-}
-li:hover a{
-            color:#074afd;
-        }
+
 #banner{
     width:990px;
     height:3720px;

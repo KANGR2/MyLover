@@ -2,7 +2,6 @@
 $bigwidth:100%;
 @mixin lishuxing{
     float:left;
-    list-style:none;
 }
 @mixin ashuxing{
     text-decoration:none;
@@ -12,70 +11,23 @@ $bigwidth:100%;
     padding:0;
     margin:0;
 }
+a{
+    text-decoration:none;
+}
+li{
+    list-style:none;
+}
 #box{
     width:$bigwidth;
-    height:3887px;
-    border:solid 1px #000;
+    height:3680px;
  //   background:#000;
-}
-#logo{
-    width:$bigwidth;
-    height:125px;
-    overflow:hidden;
-    img{
-        display:block;
-    }
 }
 #wrap{
     width:990px;
-    height:3760px;
+    height:3060px;
     margin:0 auto;
-    border:solid 1px #000;
-}
-#top{
-    position:relative;
-    ul{
-        width:990px;
-        height:40px;
-        background:#000;
-        
-        li{
-            @include lishuxing;
-            width:196px;
-            height:40px;
-            text-align:center;
-            line-height:40px;
-        }
-    }
-    .ziul{
-        width:196px;
-        height:auto;
-        border:solid 1px #000;
-        position:absolute;
-        left:392px;
-        top:3px;
-        background:#142c6c;
-        display:none;
-        li{
-            text-decoration:none;
-            width:196px;
-            height:40px;
-            border:solid 1px #000;
-            a{color:red;}
-        }
-    }
-} 
-//.fenlei:hover .ziul{
-//  display:block;
-//}
-a{
-    color:white;
-    @include ashuxing;
 }
 
-//li:hover a{
-//          color:#074afd;
-//  }
 #banner{
     width:990px;
     height:500px;
@@ -95,13 +47,37 @@ a{
 }
 #content{
     width:990px;
-    height:2385px;
+    height:2395px;
     overflow:hidden;
     .contents{
         width:990px;
-        height:1980px;
+        height:1990px;
+        
+//      .moban{
+//          width:200px;
+//          height:170px;
+//          display:none;
+//          position:absolute;
+//          padding-top:30px;
+//          background:rgba(0,0,0,0.3);
+//          color:white;
+//          font-weight:bolder;
+//          text-align:center;
+//          u{
+//              text-decoration:none;
+//              font-size:18px;
+//          }
+//          i{
+//              font-style:normal;
+//              font-size:16px;
+//          }
+//          span{
+//              font-size:20px;
+//              color:#001e5e;
+//          }
+//      }
         dl{
-            width:970px;
+            width:966px;
             height:200px;
             padding:5px 0px 5px 20px;
             margin-bottom:5px;
@@ -118,13 +94,16 @@ a{
             font-size:16px;
         }
         dd{
-            width:200px;
+            width:230px;
             height:200px;
             float:right;
+            position:relative;
             overflow:hidden;
             img{
                 width:200px;
                 height:200px;
+                position:absolute;
+                left:30px;
             }
         }
         h2{
@@ -138,4 +117,10 @@ a{
         }
     }
 }
-
+#foot{
+    width:990px;
+    height:125px;
+    background:#fff;
+    overflow:hidden;
+    margin-top:10px;
+}

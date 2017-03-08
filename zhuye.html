@@ -2,36 +2,14 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>柏林电影节</title>
+		<title>首页</title>
 	</head>
 	<link rel="stylesheet" href="css/zhuye.css" />
 	<body>
 		<div id="box">
-			<div id="logo"><img src="img/logo.jpg" /></div>
+			<div id="alltop"></div>
 			<div id="wrap">
-				<div id="top">
-					<ul>
-						<li><a href="###">首页</a></li>
-						<li><a href="###">柏林电影节</a></li>
-						<li class="fenlei"><a href="###">全部分类^</a></li>
-						<ul class="ziul">
-							<li><a href="###">全部分类</a></li>
-							<li><a href="###">新品上市</a></li>
-							<li><a href="###">新品上市</a></li>
-							<li><a href="###">新品上市</a></li>
-							<li><a href="###">新品上市</a></li>
-						</ul>
-						<li><a href="###">钻戒专区</a></li>
-						<li><a href="###">特价商品</a></li>
-					</ul>
-					<!--<ul class="ziul">
-						<li><a href="###">全部分类</a></li>
-						<li><a href="###">新品上市</a></li>
-						<li><a href="###">新品上市</a></li>
-						<li><a href="###">新品上市</a></li>
-						<li><a href="###">新品上市</a></li>
-					</ul>-->
-				</div>
+				
 				<div id="banner">
 					<ul id="slide">
 						<li><img src="img/tp6.jpg" /></li>
@@ -41,6 +19,12 @@
 				<div id="content">
 					<img src="img/tp8.jpg" />
 					<div class="contents">
+						<!--<div class="moban">
+							<u>Love携刻心底</u><br /><br />
+							<i>为自己更为下一代珍藏</i><br /><br />
+							<span>MyLover</span>
+						</div>-->
+						
 						<dl>
 							<dt>
 								<h2>传世之作</h2>
@@ -110,20 +94,19 @@
 							<dt>
 								<h2>BERLIN STAR(柏林之星)系列</h2>
 								<p>&nbsp;&nbsp;&nbsp;&nbsp;通灵珠宝"BERLIN STAR(柏林之星)"系列，其设计灵感来源于柏林电影节元素。</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;BERLIN STAR(柏林之星)系列由电影节主席Dieter结合欧洲文化元素跨界创意设计，饰品融合了德国艺术文化印记和珠宝表现艺术，表达艺术闪耀生活的理念。
-
-</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;BERLIN STAR(柏林之星)系列由电影节主席Dieter结合欧洲文化元素跨界创意设计，饰品融合了德国艺术文化印记和珠宝表现艺术，表达艺术闪耀生活的理念。</p>
 							</dt>
 							<dd><img src="img/tp17.jpg" /></dd>
 						</dl>
 					</div>
 				</div>
-				
-				
-				
-				
+				<div id="foot">
+					<img src="img/tp18.PNG" />
+				</div>
 				
 			</div>
+			
+			<div id="footer"></div>
 			
 		</div>
 	</body>
@@ -132,34 +115,36 @@
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script>
 	$(function(){
+	
 		
-		//子集ul的显示
-		$(".fenlei").mouseover(function(){
-			$(".ziul").css("display":"block");
-			
-		});
-		//导航中鼠标移上后字体颜色改变
-		$("#top li").mouseover(function(){
-		//	$(li a).css(color:"#074afd");
-			$(this).animate({"color":"#074afd"});
-		});
-		//轮播图
-//		var p = new AutoPlayerImgs(
-//			"banner",
-//			990px,
-//			500px,
-//			["img/tp6.jpg","img/tp7.jpg"],
-//			1000,
-//			{
-//				width:30,height:30,background:"#ccc",highlightcolor:"red"
-//			}
-//		);
-//		p.go();
+		$("#alltop").load("top.html");
+		$("#footer").load("footer.html");
 		
-		var img1=new AutoPlayImgs("banner",990,500,
-				["img/tp6.jpg","img/tp7.jpg"],1000,
-				{width:30,height:30,background:"#ccc",highlightcolor:"red"});
-		img1.go();
+		$(".contents dd img").mouseover(function(){
+//			console.log($(this));
+			$(this).animate({
+				"width":"1100px"
+			});
+		});
+		$(".contents dd img").mouseout(function(){
+//			console.log($(this));
+			$(this).animate({
+				"left":"30px"
+			});
+		});
+		$(".contents dl").mouseover(function(){
+			$(this).css({
+				"border":"solid 2px #001e5e"
+			});
+		});
+		$(".contents dl").mouseout(function(){
+			$(this).css({
+				"border":"none"
+			});
+		});
+		
+		
+		
 		
 	});
 	

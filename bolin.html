@@ -4,28 +4,23 @@
 		<meta charset="UTF-8">
 		<title>柏林电影节</title>
 	</head>
-	<link rel="stylesheet" href="css/zhuye.css" />
+	<link rel="stylesheet" href="css/bolin.css" />
 	<body>
 		<div id="box">
-			<div id="logo"><img src="img/logo.jpg" /></div>
-			<div id="wrap">
-				<div id="top">
-					<ul>
-						<li><a href="###">首页</a></li>
-						<li><a href="###">柏林电影节</a></li>
-						<li><a href="###">钻戒专区</a></li>
-						<li><a href="###">特价商品</a></li>
-						<li><a href="###">顾客意见反馈</a></li>
-					</ul>
-				</div>
+			<div id="alltop"></div>
+				<div id="wrap">
 				<div id="banner"><img src="img/tp1.jpg"/>
 								 <img src="img/tp2.jpg"/>
 								 <img src="img/tp3.jpg"/>
-								 <img src="img/tp5.jpg"/>
 								 <img src="img/tp4.jpg"/>
+								 <img src="img/tp5.jpg"/>
 				</div>
 			</div>
 			
 		</div>
 	</body>
 </html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$("#alltop").load("top.html");
+</script>

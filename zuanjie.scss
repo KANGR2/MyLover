@@ -1,0 +1,134 @@
+@charset "utf-8";
+$bigwidth:100%;
+@mixin lishuxing{
+    float:left;
+}
+@mixin ashuxing{
+    text-decoration:none;
+    font-weight:bolder;
+}
+*{
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration:none;
+}
+li{
+    list-style:none;
+}
+#wrap{
+    width:$bigwidth;
+    height:2680px;
+ //   background-image: url(img/beijing.png);
+    background: #fcf2ec;
+}
+
+#centerl{
+    width:1000px;
+    height:2000px;
+    border:solid 1px #000;
+    margin:0 auto;
+}
+#list{
+    width:1000px;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+    img{
+        width:1000px;
+        height:500px;
+        position:absolute;
+        top:0px;
+    //    left:-1000px;
+    }
+    ul{
+        list-style:none;
+        position:absolute;
+        right:300px;
+        bottom:10px;
+        li{
+            float:left;
+            width:20px;
+            height:20px;
+            background-color:darkgrey;
+            border-radius:50%;
+            margin-right:10px;  
+        }
+    }
+}
+
+#conter{
+    width:1000px;
+    height:1420px;
+    .conters{
+        width:1000px;
+        height:290px;
+        padding:0 20px;
+        dl{
+            width:218px;
+            height:288px;
+            padding:5px 5px;
+            margin:5px 5px;
+            float:left;
+            border-right:solid 1px lightpink;
+            dt{
+                width:208px;
+                height:148px;
+                text-align:center;
+                img{
+                width:160px;
+                height:112px;
+                margin:10px;
+                }
+            }
+            dd{
+                width:220px;
+                font-size:14px;
+                color:#666;
+                p{
+                    color:lightpink;
+                }
+                i{
+                    font-style:none;
+                    float:left;
+                }
+                span{
+                    float:right;
+                    width:80px;
+                    height:20px;
+                    background:#b71e57;
+                    color:white;
+                    font-weight:bolder;
+                    text-align:center;
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+}
+#lb{
+    width:980px;
+    height:80px;
+    padding-right:20px;
+    p{
+        float:right;
+        span{
+            font-weight:bolder;
+        }
+        a{
+            display:inline-block;
+            width:60px;
+            height:30px;
+            text-align:center;
+            background:#b71e57;
+            margin-top:25px;
+            line-height:30px;
+            color:white;
+        }
+    }
+    
+}
+  #footer{
+      
+  }          
