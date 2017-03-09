@@ -10,23 +10,49 @@ a {
 li {
   list-style: none; }
 
+#alltop{
+	width:100%;
+	height:205px;
+}
 #logo {
   width: 100%;
   height: 125px;
-  overflow: hidden; }
+  background:#142c6c; }
   #logo img {
-    display: block; }
-
+    display: block;
+    float:left; }
+#logo ul{
+	float:right;
+	width:470px;
+	height:40px;
+	margin-top:20px;
+}
+#logo li:first-child{
+	width:100px;
+}
+#logo li a:hover{
+	color:red;
+}
+#logo li{
+	float:left;
+	width:70px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+}
+#logo a{
+	color:#fff;
+}
 #topw {
   width: 100%;
-  height: 40px;
+  height: 80px;
   background: #000; }
 
 #top {
   width: 1000px;
   height: 40px;
   margin: 0 auto;
-  position: relative; }
+   }
   #top ul {
     width: 990px;
     height: 40px;
@@ -37,23 +63,7 @@ li {
       height: 40px;
       text-align: center;
       line-height: 40px; }
-  #top .ziul {
-    width: 196px;
-    height: auto;
-    border: solid 1px #000;
-    position: absolute;
-    z-index:10;
-    left: 392px;
-    top: 40px;
-    background: rgba(0,30,94,0.5);
-    display: none; }
-    #top .ziul li {
-      text-decoration: none;
-      width: 196px;
-      height: 40px;
-      border-bottom: solid 1px #000; }
-      #top .ziul li a {
-        color: white; }
+  
 #top a {
   color: white;
   text-decoration: none;
@@ -65,27 +75,107 @@ li {
 #top .fenlei:hover .ziul{
 	display:block;
 }
+#logo p{
+	float:right;
+	width:300px;
+	height:40px;
+	margin-right:20px;
+	padding-left:3px;
+}
+#Tex{
+	width:180px;
+	height:32px;
+	border:none;
+}
+/*#logo p a{
+	display:inline-block;
+	width:50px;
+	height:32px;
+	color:red;
+	text-align:center;
+	line-height:32px;
+}
+#logo p a:hover{
+	border:solid 2px #f00;
+	font-weight:bolder;
+	color:white;
+}*/
+#topx{
+	width: 1000px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+#topx ul {
+    width: 990px;
+    height: 40px; }
+#topx ul li {
+      float: left;
+      width: 196px;
+      height: 40px;
+      font-weight:bolder;
+      text-align: center;
+      color: white;
+      line-height: 40px; }
+  #topx .ziul {
+    width: 196px;
+    height: auto;
+    border: solid 1px #000;
+    position: absolute;
+    z-index:10;
+    left: 196px;
+    top: 0px;
+    background: rgba(0,30,94,0.4);
+    display: none; }
+    #topx .ziul li {
+      text-decoration: none;
+      width: 196px;
+      height: 40px; }
+     #topx .ziul a {
+        color: white; }
+     #topx li a {
+        color: white; } 
 		</style>
 	
 		<div id="alltop">
-			<div id="logo"><img src="img/logo.jpg" /></div>
+			<div id="logo">
+				<img src="img/logo.jpg" />
+				<ul>
+					<li><a href="###">您好，请登录 </a></li>
+					<li><a href="###">免费注册 </a></li>
+					<li><a href="###">+关注 </a></li>
+					<li><a href="###">会员中心 </a></li>
+					<li><a href="###">我的订单 </a></li>
+					<li><a href="###">联系卖家 </a></li>
+				</ul><br />
+				<!--<p>
+					<input type="text" id="Tex" />
+					<a href="###" id="btn1">搜全站</a>
+					<a href="###" id="btn2">搜本店</a>
+				</p>-->
+			</div>
 				<div id="topw">
 					<div id="top">
 						<ul>
-							<li><a href="zhuye.html">首页</a></li>
-							<li><a href="bolin.html">柏林电影节</a></li>
-							<li class="fenlei"><a href="###">全部分类^</a></li>
-							<ul class="ziul">
-								<li><a href="###">新品上市</a></li>
-								<li><a href="###">吊坠项链</a></li>
-								<li><a href="###">手链手镯</a></li>
-								<li><a href="###">婚戒定制</a></li>
-								<li><a href="###">大钻定制</a></li>
-								<li><a href="###">明星单品</a></li>
-								<li><a href="###">专柜同款</a></li>
-							</ul>
+							<li><a href="shouye.html">首页</a></li>
+							<li ><a href="zhuye.html">品牌文化</a></li>
 							<li><a href="zuanjie.html">钻戒专区</a></li>
 							<li><a href="tejia.html">特价商品</a></li>
+							<li><a href="bolin.html">柏林电影节</a></li>
+						</ul>
+					</div>
+					<div id="topx">
+						<ul>
+							<li class="fenlei"><a href="###">全部分类></a></li>
+								<ul class="ziul">
+										<li><a href="###">新品上市</a></li>
+										<li><a href="###">吊坠项链</a></li>
+										<li><a href="###">手链手镯</a></li>
+										<li><a href="###">婚戒定制</a></li>
+										<li><a href="###">大钻定制</a></li>
+										<li><a href="###">明星单品</a></li>
+										<li><a href="###">专柜同款</a></li>
+									</ul>
 						</ul>
 					</div>
 				</div>
@@ -93,12 +183,13 @@ li {
 			<script src="js/jquery-1.8.3.min.js"></script>
 			<script>
 //				$("#top .fenlei").mouseenter(function(){
-//					$("#top .ziul").css({"display":"block"});
+//					$("#top .ziul").css({"display":"block"},1000);
 //				});
 //				$("#top .fenlei").mouseleave(function(){
 //					$("#top .ziul").css({"display":"none"});
 //				});
-				$("#top .fenlei").click(function(){
+
+				$("#topx .fenlei").click(function(){
 					$(this).next().toggle(500);
 				});
 			</script>

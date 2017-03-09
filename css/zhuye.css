@@ -21,8 +21,7 @@ li {
   width: 990px;
   height: 500px;
   position: relative;
-  overflow: hidden;
-  border: solid 1px #000; }
+  overflow: hidden; }
   #banner ul {
     width: 3000px;
     height: 500px;
@@ -52,7 +51,8 @@ li {
     #content .contents p {
       padding: 10px;
       font-weight: bolder;
-      font-size: 16px; }
+      font-size: 16px;
+      color: #666; }
     #content .contents dd {
       width: 230px;
       height: 200px;

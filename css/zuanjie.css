@@ -8,15 +8,14 @@ a {
 li {
   list-style: none; }
 
-#wrap {
+#box {
   width: 100%;
-  height: 2680px;
+  height: 2980px;
   background: #fcf2ec; }
 
 #centerl {
   width: 1000px;
-  height: 2000px;
-  border: solid 1px #000;
+  height: 2300px;
   margin: 0 auto; }
 
 #list {
@@ -32,7 +31,6 @@ li {
   #list ul {
     list-style: none;
     position: absolute;
-    z-index:10px;
     right: 300px;
     bottom: 10px; }
     #list ul li {
@@ -45,10 +43,10 @@ li {
 
 #conter {
   width: 1000px;
-  height: 1420px; }
+  height: 1720px; }
   #conter .conters {
-    width: 1000px;
-    height: 290px;
+    width: 960px;
+    height: 1600px;
     padding: 0 20px; }
     #conter .conters dl {
       width: 218px;
@@ -70,19 +68,33 @@ li {
         font-size: 14px;
         color: #666; }
         #conter .conters dl dd p {
-          color: lightpink; }
+          color: salmon; }
         #conter .conters dl dd i {
-          font-style: none;
-          float: left; }
+          font-style: normal;
+          float: left;
+          color: red;
+          font-weight: bolder; }
         #conter .conters dl dd span {
           float: right;
           width: 80px;
-          height: 20px;
+          height: 30px;
           background: #b71e57;
           color: white;
           font-weight: bolder;
           text-align: center;
-          margin-right: 10px; }
+          line-height: 30px;
+          margin-right: 10px;
+          font-size: 15px; }
+
+.conters p:hover {
+  font-weight: bolder;
+  font-size: 15px; }
+
+.conters span:hover {
+  font-size: 16px; }
+
+.conters first-child dd:hover {
+  font-size: 16px; }
 
 #lb {
   width: 980px;

@@ -17,17 +17,16 @@ a{
 li{
     list-style:none;
 }
-#wrap{
+#box{
     width:$bigwidth;
-    height:2680px;
+    height:2980px;
  //   background-image: url(img/beijing.png);
     background: #fcf2ec;
 }
 
 #centerl{
     width:1000px;
-    height:2000px;
-    border:solid 1px #000;
+    height:2300px;
     margin:0 auto;
 }
 #list{
@@ -60,10 +59,10 @@ li{
 
 #conter{
     width:1000px;
-    height:1420px;
+    height:1720px;
     .conters{
-        width:1000px;
-        height:290px;
+        width:960px;
+        height:1600px;
         padding:0 20px;
         dl{
             width:218px;
@@ -87,25 +86,39 @@ li{
                 font-size:14px;
                 color:#666;
                 p{
-                    color:lightpink;
+                    color:salmon;
                 }
                 i{
-                    font-style:none;
+                    font-style:normal;
                     float:left;
+                    color:red;
+                    font-weight:bolder;
                 }
                 span{
                     float:right;
                     width:80px;
-                    height:20px;
+                    height:30px;
                     background:#b71e57;
                     color:white;
                     font-weight:bolder;
                     text-align:center;
+                    line-height:30px;
                     margin-right:10px;
+                    font-size:15px;
                 }
             }
         }
     }
+}
+.conters p:hover{
+    font-weight:bolder;
+    font-size:15px;
+}
+.conters span:hover{
+    font-size:16px;
+}
+.conters first-child dd:hover{
+    font-size:16px;
 }
 #lb{
     width:980px;
@@ -128,7 +141,4 @@ li{
         }
     }
     
-}
-  #footer{
-      
-  }          
+}         

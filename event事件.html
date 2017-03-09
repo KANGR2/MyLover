@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+    <style>
+	   body{
+	        cursor:none;
+			background:#000;
+	   }
+	   
+       #Img{
+	        position:absolute;
+			top:0px;
+			left:0px;
+			
+	   } 
+	   
+    </style>
+ </head>
+ <body>
+    <img src="../images/2.png" width="50" height="50" id="Img"/>
+	<script>
+	    var Img=document.getElementById("Img");
+		    document.onmousemove=function(evt){
+			    var e=evt||event;   
+				Img.style.top=e.clientY-25+"px";
+				Img.style.left=e.clientX-25+"px";
+			}
+		
+	</script>
+	
+      
+ </body>
+</html>
