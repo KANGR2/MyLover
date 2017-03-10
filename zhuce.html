@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<style>
+			* {
+			  padding: 0;
+			  margin: 0; }
+			
+			a {
+			  text-decoration: none; }
+			
+			li {
+			  list-style: none; }
+			
+			#logo {
+			  width: 100%;
+			  height: 125px;
+			  background:#142c6c; }
+			  #logo img {
+			    display: block;
+			    float:left; }
+			
+			#content{
+				width:100%;
+				height:740px;
+				background-image: url(img/bj1.jpg);
+				background-position: right bottom;
+				background-repeat: no-repeat;
+			}
+			.content1{
+				width:500px;
+				height:500px;
+				margin-top:50px;
+				padding-top:20px;
+				margin-left:90px;
+			}
+			h1{
+				text-align:center;
+				color:#fe2f14;
+			}
+			p{
+				width:370px;
+				height:40px;
+				margin-top:20px;
+				margin-left:90px;
+				font-size:18px;
+			}
+			p input{
+				width:250px;
+				height:35px;
+				text-align:center;
+			}
+			span{
+				display:inline-block;
+				width:65px;
+				height:25px;
+				text-align:center;
+				line-height:25px;
+				background:#CCCCCC;
+				margin:0 10px;
+			}
+			#tex2{
+				width:80px;
+				height:20px;
+			}
+			a{
+				float:right;
+				color:#cornflowerblue;
+				font-size:16px;
+			}
+			#btn{
+				width:350px;
+				height:40px;
+				margin-left:90px;
+				margin-top:20px;
+				font-size:18px;
+				background:#fe2f14;
+			}
+			u{
+				text-decoration:none;
+				margin-left:90px;
+				margin-top:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="logo">
+				<img src="img/logo.jpg" />
+			</div>
+			<div id="content">
+				<div class="content1">
+					<h1>会员注册</h1>
+					<p>用户名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="username" placeholder="您的账户名和登录名" /></p>
+					<p>设置密码：&nbsp;&nbsp;<input type="password" id="userpwd1" placeholder="建议至少使用两种字符组合" /></p>
+					<p>确认密码：&nbsp;&nbsp;<input type="password" id="userpwd2" placeholder="请再次输入密码" /></p>
+					<p>电子邮箱：&nbsp;&nbsp;<input type="text" placeholder="请输入电子邮箱" id="email"/></p>
+					<p>验证码：&nbsp;&nbsp;&nbsp;&nbsp;<span></span>&nbsp;&nbsp;<a href="###" id="but1">换一张？</a><input type="text" id="tex2" /></p>
+					
+					<u><input type="checkbox" />我已看过MyLover用户协议并同意该内容</u>
+					
+					<input type="button" value="注册" id="btn" /><br />
+					<p><a href="denglu.html">>已有账号？请登录吧！</a></p>
+				
+				
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		var m = parseInt(Math.random()*10000);
+			$(".content1 span").text(m);
+		$("#but1").click(function(){
+			var m = parseInt(Math.random()*10000);
+			$(".content1 span").text(m);
+		//	console.log(m);
+		});
+		
+		$(".content1 #username").blur(function(){
+			
+		});
+		
+	});
+</script>

@@ -10,8 +10,7 @@ li {
 
 #box {
   width: 100%;
-  height: 4300px;
-  border: solid 1px #00f; }
+  height: 4300px; }
 
 #wrap {
   width: 1240px;
@@ -39,7 +38,17 @@ li {
       #content .content1 dl dd {
         text-align: center; }
       #content .content1 dl dt {
-        text-align: center; }
+        width: 1240px;
+        height: 496px;
+        text-align: center;
+        overflow: hidden;
+        position: relative; }
+        #content .content1 dl dt img {
+          width: 1240px;
+          height: 496px;
+          position: absolute;
+          left: 0;
+          top: 0; }
   #content .content2 {
     width: 1240px;
     height: 596px;
@@ -80,7 +89,9 @@ li {
   #content .content4 {
     width: 1240px;
     height: 506px;
-    margin-top: 10px; }
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative; }
   #content .content5 {
     width: 1240px;
     height: 410px;

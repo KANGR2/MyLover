@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		a{
+    		text-decoration:none;
+		}
+		li{
+   			list-style:none;
+		}
+		#box{
+			width:100%;
+			height:1500px;
+			border:solid 1px #00f;
+		}
+		#content{
+			width:1100px;
+			height:700px;
+			margin:0 auto;
+			border:solid 1px #0f0;
+		}
+		#contentl{
+			width:350px;
+			height:500px;
+			float:left;
+			overflow:hidden;
+			border:solid 1px #f00;
+		}
+		/*.contentls{
+			width:345px;
+			height:345px;
+			overflow:hidden;
+			border:solid 1px #ccc;
+		}*/
+		#contentl .oUl1{
+			width:350px;
+			height:345px;
+			float:left;
+			border:solid 1px #ccc;
+			position:relative;
+			
+		}
+		#contentl .oUl1 li{
+			width:350px;
+			height:345px;
+			float:left;
+			position:absolute;
+			
+		}
+		#contentl .oUl2{
+			width:350px;
+			height:70px;
+			margin-top:345px;
+		}
+		#contentl .oUl2 li{
+			width:50px;
+			height:50px;
+			margin:8px;
+			float:left;
+		}
+		/*#contentl .oUl2 img:hover{
+			border:solid 1px #f00;
+		}*/
+		#contentl p{
+			width:330px;
+			color:#666;
+			margin-top:20px;
+			padding-left:10px;
+		}
+		#contentl u{
+			float:right;
+			text-decoration: none;
+			margin-right:10px;
+		}
+		.active{
+			border:solid 1px #f00;
+		}
+		#contentr{
+			width:640px;
+			height:440px;
+			float:right;
+			padding:30px;
+			border:solid 1px #f00;
+		}
+		#contentr h3{
+			color:#666;
+		}
+		#contentr .p1{
+			width:610px;
+			height:80px;
+			padding:10px;
+			margin-top:20px;
+			background: #ccc;;
+		}
+		#contentr u{
+			text-decoration:none;
+			font-size:20px;
+			color:red;
+		}
+		#contentr a{
+			color:#00f;
+		}
+		#contentr span{
+			float:right;
+		}
+		#contentr i{
+			font-style:normal;
+		}
+		#contentr p{
+			margin-top:10px;
+			color:#666;
+		}
+		#contentr .p2{
+			border-top:solid 1px #ccc;
+			border-bottom:solid 1px #ccc;
+			padding:10px 0 10px 0;
+			margin-bottom:10px;
+		}
+		#contentr .p2 a{
+			width:50px;
+			height:40px;
+			display:inline-block;
+			border:solid 1px #ccc;
+			margin:5px;
+			text-align:center;
+			line-height:40px;
+			color:#666;
+		}
+		#contentr .f1{
+			display:inline-block;
+			width:50px;
+			height:38px;
+			text-align:center;
+			border:solid 1px #ccc;
+		}
+		#contentr .f1 input{
+			width:12px;
+			height:18px;
+			float:right;
+		}
+		#contentr #btn1{
+			width:150px;
+			height:38px;
+			color:white;
+			background:red;
+			text-align:center;
+			line-height:38px;
+			margin-left:100px;
+			font-weight:bolder;
+			margin-top:10px;
+		}
+		#contentr em{
+			display:block;
+			font-style:normal;
+			margin-top:5px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="footer"></div>
+			<div id="content">
+				<div id="contentl">
+					<!--<div class="contentls">
+						<img src="img/tp64.PNG" />
+						<div id="pop"></div>
+					</div>
+					<div class="bigPic">
+						<img src="images/zhiling1.jpg" />
+					</div>-->
+					
+					<ul class="oUl1">
+						<img src="img/c0.PNG" />
+					</ul>
+					<ul class="oUl2">
+						<li class="active"><img src="img/tp58.jpg" /></li>
+						<li><img src="img/tp59.jpg" /></li>
+						<li><img src="img/tp60.jpg" /></li>
+						<li><img src="img/tp61.jpg" /></li>
+						<li><img src="img/tp62.jpg" /></li>
+					</ul>
+					
+					<p><a>❤关注&nbsp;&nbsp;&nbsp;</a><span>分享</span><u>举报</u></p>
+				</div>
+				<div id="contentr">
+					<h3>TESiRO通灵珠宝 心花怒放钻石戒指 梦想之星婚戒钻戒 群镶显钻结婚 专柜同款求婚女戒 白18K金 14号</h3>
+					<p class="p1">京 东 价 &nbsp;&nbsp;&nbsp;<u>￥3097.00</u><a>&nbsp;&nbsp;&nbsp;降价通知</a><span>累计评价<a>30+</a></span><br/><br/><i>促销</i></p>
+					<p>支持</p>
+					<p>配送至  北京null</p>
+					<p class="p2">
+						选择手寸 <a href="###">12号</a><a href="###">14号</a><a href="###">15号</a><a href="###">13号</a><a href="###">10号</a><a href="###">9号</a><a href="###">16号</a><a href="###">11号</a><a href="###">8号</a><a href="###">10号</a><a href="###">17号</a>
+					</p>
+					<b class="f1">
+						1<input type="button" value="+" /><br />
+						<input type="button" value="-" />
+					</b>
+					<input type="button" value="加入购物车" id="btn1" /><br />
+					<em>温馨提示：支持七天无理由退换</em>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		$("#footer").load("top.html");
+		
+		$("#contentl .oUl1 img").mouseenter(function(){
+			clearInterval(timer);
+		});
+		$("#contentl .oUl1 img").mouseleave(function(){
+			autoplay();
+		});
+		$("#contentl .oUl2 img").mouseenter(function(){
+			clearInterval(timer);
+		});
+		$("#contentl .oUl2 img").mouseleave(function(){
+			autoplay();
+		});
+		//小图的轮播
+		var oimg=box.getElementsByTagName("img")[0];
+		var oLi = document.getElementsByClassName("oUl2")[0].getElementsByTagName("li");
+		var m=0;
+		var timer;
+		function autoplay(){
+			timer = setInterval (function(){
+					m++;
+					if(m==5){
+						m=0;
+					}
+					for(var i=0;i<oLi.length;i++){
+						oLi[i].className = "";
+					}
+					oLi[m].className = "active";
+					oimg.src="img/c"+m+".PNG";	
+			},2000);
+		}
+		autoplay();
+		for(var j=0;j<oLi.length;j++){
+			oLi[j].index = j;
+			oLi[j].onmouseover = function(){
+				for(var i=0;i<oLi.length;i++){
+					oLi[i].className = "";
+				}
+				this.className = "active";
+				m = this.index;
+				oimg.src="img/c"+m+".PNG";	
+			}
+		}
+		//放大效果
+		
+			
+	});
+</script>

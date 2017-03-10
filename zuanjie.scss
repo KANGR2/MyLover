@@ -70,7 +70,7 @@ li{
             padding:5px 5px;
             margin:5px 5px;
             float:left;
-            border-right:solid 1px lightpink;
+            border:solid 1px lightpink;
             dt{
                 width:208px;
                 height:148px;
@@ -84,6 +84,7 @@ li{
             dd{
                 width:220px;
                 font-size:14px;
+                margin-top:10px;
                 color:#666;
                 p{
                     color:salmon;
@@ -94,25 +95,28 @@ li{
                     color:red;
                     font-weight:bolder;
                 }
-                span{
+                
+            }
+            span{
                     float:right;
-                    width:80px;
+                    width:220px;
                     height:30px;
                     background:#b71e57;
                     color:white;
+                    display:none;
                     font-weight:bolder;
                     text-align:center;
                     line-height:30px;
-                    margin-right:10px;
                     font-size:15px;
+                    a{
+                        color:white;
+                    }
                 }
-            }
         }
     }
 }
-.conters p:hover{
-    font-weight:bolder;
-    font-size:15px;
+.conters dl:hover{
+    border:solid 1px #ccc;
 }
 .conters span:hover{
     font-size:16px;

@@ -13,7 +13,6 @@ li{
 #box{
     width:100%;
     height:4300px;
-    border:solid 1px #00f;
 }
 #wrap{
     width:1240px;
@@ -45,9 +44,21 @@ li{
                 text-align:center;
             }
             dt{
+                width:1240px;
+                height:496px;
                 text-align:center;
+                overflow:hidden;
+                position:relative;
+                img{
+                    width:1240px;
+                    height:496px;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                }
             }
         }
+        
         
     }
     .content2{
@@ -101,7 +112,24 @@ li{
         width:1240px;
         height:506px;
         margin-top:10px;
+        overflow:hidden;
+        position:relative;
     }
+//  #moban{
+//              width:1240px;
+//              height:506px;
+//              text-align:center;
+//              background:rgba(0,0,0,0.2);
+//              line-height:506px;
+//              font-size:25px;
+//              color:hotpink;
+//              font-weight:bolder;
+//              position:absolute;
+//              left:0px;
+//              top:506px;
+//              z-index:10;
+//           //   display:none;
+//      }
     .content5{
         width:1240px;
         height:410px; 
@@ -175,4 +203,4 @@ li{
 .content1 dd:hover{
         color:red;
         font-weight:bolder;
-    }
+}
