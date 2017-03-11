@@ -76,6 +76,14 @@
 				font-size:18px;
 				background:#fe2f14;
 			}
+			.content1 .nametxt1{
+				margin-left:200px;
+				font-style:normal;
+			}
+			.content1 .pwdtxt1{
+				margin-left:200px;
+				font-style:normal;
+			}
 		</style>
 	</head>
 	<body>
@@ -86,8 +94,10 @@
 			<div id="content">
 				<div class="content1">
 					<h1>会员登录</h1>
-					<p>用户名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="userName" placeholder="请输入用户名" /></p>
-					<p>登录密码：&nbsp;&nbsp;<input type="password" id="userpwd1" placeholder="请输入密码" /></p>
+					<p>用户名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="name1" placeholder="请输入用户名" /></p>
+					<div><i class="nametxt1"></i></div>
+					<p>登录密码：&nbsp;&nbsp;<input type="password" class="pwd1" placeholder="请输入密码" /></p>
+					<div><i class="pwdtxt1"></i></div>
 					<span><input type="checkbox" id="chx" />记住密码<a href="###">忘记密码</a></span>
 					<input type="button" value="登录" id="btn" /><br />
 					<p><a href="zhuce.html">>还没注册账户？快来注册吧！</a></p>
@@ -103,7 +113,35 @@
 <script>
 	$(function(){
 		
+		var flag=0;
+		$.getJSON("user.json",function(user){
+		console.log(user);
+		$("#btn").click(function(){
+			$(".nametxt1").text("");
+			$(".pwdtxt1").text("");
+			if($(".name1").val()==""){
+				$(".nametxt1").text("#用户名不能为空")
+			}
+			for(let i=0;i<user.length;i++){
+				if($(".name1").val()==user[i].name){
+					flag++;
+					var x=i;
+					if($(".pwd1").val()==user[x].pwd){
+					//	alert("登录成功");
+						location="http://127.0.0.1:8020/MyLover/zuanjie.html";
+						$(".name1").val("");
+						$(".pwd1").val("");
+					}else{
+						$(".pwdtxt1").text("#密码错误");
+					}
+					break;
+				}
+			}
+			if(flag==0){
+				$(".nametxt1").text("#用户名不存在")
+			}
+		})
 		
-		
+		})
 	});
 </script>

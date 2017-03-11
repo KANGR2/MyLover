@@ -1,11 +1,11 @@
 [
 	{
-		"username":"kk",
-		"userpwd":"123"
+		"name":"kk",
+		"pwd":"123456789a"
 	},
 	{
-		"username":"zhangsan",
-		"userpwd":"345"
+		"name":"zhangsan",
+		"pwd":"34567890a"
 	}
 
 ]

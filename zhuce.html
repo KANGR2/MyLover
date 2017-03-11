@@ -61,7 +61,7 @@
 				background:#CCCCCC;
 				margin:0 10px;
 			}
-			#tex2{
+			.yzm{
 				width:80px;
 				height:20px;
 			}
@@ -70,7 +70,7 @@
 				color:#cornflowerblue;
 				font-size:16px;
 			}
-			#btn{
+			.zhuce{
 				width:350px;
 				height:40px;
 				margin-left:90px;
@@ -83,6 +83,11 @@
 				margin-left:90px;
 				margin-top:20px;
 			}
+			.content1 .nametxt2,.content1 .pwdtxt2,.content1 .nextpwdtxt2,.content1 .yzmtxt{
+				margin-left:200px;
+				font-style:normal;
+				color:red;
+			}
 		</style>
 	</head>
 	<body>
@@ -93,15 +98,17 @@
 			<div id="content">
 				<div class="content1">
 					<h1>会员注册</h1>
-					<p>用户名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="username" placeholder="您的账户名和登录名" /></p>
-					<p>设置密码：&nbsp;&nbsp;<input type="password" id="userpwd1" placeholder="建议至少使用两种字符组合" /></p>
-					<p>确认密码：&nbsp;&nbsp;<input type="password" id="userpwd2" placeholder="请再次输入密码" /></p>
-					<p>电子邮箱：&nbsp;&nbsp;<input type="text" placeholder="请输入电子邮箱" id="email"/></p>
-					<p>验证码：&nbsp;&nbsp;&nbsp;&nbsp;<span></span>&nbsp;&nbsp;<a href="###" id="but1">换一张？</a><input type="text" id="tex2" /></p>
-					
+					<p>用户名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="name2" placeholder="您的账户名和登录名" /></p>
+					<div><i class="nametxt2"></i></div>
+					<p>设置密码：&nbsp;&nbsp;<input type="password" class="pwd2" placeholder="建议至少使用两种字符组合" /></p>
+					<div><i class="pwdtxt2"></i></div>
+					<p>确认密码：&nbsp;&nbsp;<input type="password" class="nextpwd2" placeholder="请再次输入密码" /></p>
+					<div><i class="nextpwdtxt2"></i></div>
+					<p>验证码：&nbsp;&nbsp;&nbsp;&nbsp;<span class="yzm2"></span>&nbsp;&nbsp;<a href="###" id="but1">换一张？</a><input type="text" class="yzm" /></p>
+					<div><i class="yzmtxt"></i></div>
 					<u><input type="checkbox" />我已看过MyLover用户协议并同意该内容</u>
 					
-					<input type="button" value="注册" id="btn" /><br />
+					<input type="button" value="注册" class="zhuce" /><br />
 					<p><a href="denglu.html">>已有账号？请登录吧！</a></p>
 				
 				
@@ -122,9 +129,85 @@
 		//	console.log(m);
 		});
 		
-		$(".content1 #username").blur(function(){
-			
+		$("#btn").click(function(){
+			$("#username").text("");
 		});
 		
+		
+		var flag=0;
+		$.getJSON("user.json",function(user){
+		console.log(user);
+		
+		//用户名设置
+		var fg=0;
+		$(".name2").blur(function(){
+			$(".nametxt2").text("");
+			for(let i=0;i<user.length;i++){
+				if($(".name2").val()==user[i].name){
+					$(".nametxt2").text("#用户名已存在")
+					fg++;
+				}else if($(".name2").val()==""){
+					$(".nametxt2").text("#用户名不能为空")
+					fg++;
+				}else{
+					fg=0;
+				}
+			}
+		})
+		
+		//密码设置
+		$(".pwd2").blur(function(){
+			$(".pwdtxt2").text("");
+			var mypwd=$(".pwd2").val();
+			var reg=/^[0-9a-zA-Z][0-9a-zA-Z_]{5,11}$/;//
+			if(reg.test(mypwd)){//
+				$(".pwdtxt2").text("");
+				//密码确认设置
+					$(".nextpwd2").blur(function(){
+						$(".nextpwdtxt2").text("");
+						if($(".nextpwd2").val()==""){
+							$(".nextpwdtxt2").text("确认密码不能为空");
+							fg++;
+						}else if($(".nextpwd2").val()==$(".pwd2").val()&&$(".nextpwd2").val()!=""){
+							$(".nextpwdtxt2").text("");
+							fg=0;
+						}else{
+							$(".nextpwdtxt2").text("#请保持与输入密码一致");
+							fg++;
+						}
+					})
+			}else if($(".pwd2").val()==""){
+				$(".pwdtxt2").text("#密码不能为空");
+				fg++;
+			}else{
+				$(".pwdtxt2").text("#密码由6-12位字母数字下划线组成");
+				fg++;
+			}
+		})
+		
+		//验证码的输入
+		$(".yzm").blur(function(){
+			if($(".yzm").val()==$(".yzm2").text()){
+				$(".yzmtxt").text("");
+			}else{
+				$(".yzmtxt").text("#验证码输入错误!")
+				fg++;
+			}
+		})
+		
+		$(".zhuce").click(function(){	
+			if(($(".nametxt2").text()=="")&&($(".pwdtxt2").text()=="")&&($(".nextpwdtxt2").text()=="")&&($(".yzmtxt").text()=="")&&($(".name2").val()!="")&&($(".pwd2").val()!="")&&($(".nextpwd2").val()!="")&&($(".yzm").val()!="")){
+//						alert("注册成功!");
+				location="http://127.0.0.1:8020/MyLover/zuanjie.html";
+				$(".name2").val("");
+			$(".pwd2").val("");
+			$(".nextpwd2").val("");
+			$(".yzm").val("");
+			}else{
+				alert("请完善注册信息");
+			}
+		})
+		
+		})
 	});
 </script>

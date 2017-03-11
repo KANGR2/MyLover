@@ -16,21 +16,19 @@
 		}
 		#box{
 			width:100%;
-			height:1500px;
-			border:solid 1px #00f;
+			height:980px;
 		}
 		#content{
 			width:1100px;
-			height:700px;
+			height:520px;
 			margin:0 auto;
-			border:solid 1px #0f0;
+			border-bottom:solid 1px #ccc;
 		}
 		#contentl{
 			width:350px;
 			height:500px;
 			float:left;
 			overflow:hidden;
-			border:solid 1px #f00;
 		}
 		/*.contentls{
 			width:345px;
@@ -42,6 +40,7 @@
 			width:350px;
 			height:345px;
 			float:left;
+			overflow:hidden;
 			border:solid 1px #ccc;
 			position:relative;
 			
@@ -86,7 +85,6 @@
 			height:440px;
 			float:right;
 			padding:30px;
-			border:solid 1px #f00;
 		}
 		#contentr h3{
 			color:#666;
@@ -160,11 +158,80 @@
 			font-style:normal;
 			margin-top:5px;
 		}
+		#contentr .p2 a:hover{
+			border:solid 1px red;
+		}
+		#foot{
+			width:1100px;
+			height:210px;
+			margin:0 auto;
+		}
+		.footl{
+			width:200px;
+			height:200px;
+			float:left;
+			border:solid 1px #ccc;
+		}
+		.footl h3{
+			text-align:center;
+			width:200px;
+			height:40px;
+			border:solid 1px #ccc;
+			line-height:40px;
+			background:#ccc;
+		}
+		.footl p{
+			width:200px;
+			height:80px;
+			border:solid 1px #ccc;
+			padding-top: 10px;
+		}
+		.footl span{
+			display:block;
+			width:70px;
+			border:solid 1px #ccc;
+			height:70px;
+			float:left;
+			color:red;
+			text-align:center;
+			line-height:80px;
+			font-size:25px;
+			margin-right:5px;
+		}
+		.footl u{
+			text-decoration:none;
+			width:70px;
+			height:40px;
+			display:inline-block;
+			background:red;
+			line-height:40px;
+			text-align:center;
+			color:white;
+			font-weight:bolder;
+			margin:10px 10px;
+		}
+		.footr{
+			width:860px;
+			height:200px;
+			float:right;
+		}
+		.footr h3{
+			width:100px;
+			height:40px;
+			text-align:center;
+			line-height:40px;
+			color:white;
+			background:red;
+		}
+		.footr ul{
+			margin-top:20px;
+			margin-left:10px;
+		}
 		</style>
 	</head>
 	<body>
 		<div id="box">
-			<div id="footer"></div>
+			<div id="alltop"></div>
 			<div id="content">
 				<div id="contentl">
 					<!--<div class="contentls">
@@ -189,7 +256,7 @@
 					<p><a>❤关注&nbsp;&nbsp;&nbsp;</a><span>分享</span><u>举报</u></p>
 				</div>
 				<div id="contentr">
-					<h3>TESiRO通灵珠宝 心花怒放钻石戒指 梦想之星婚戒钻戒 群镶显钻结婚 专柜同款求婚女戒 白18K金 14号</h3>
+					<h3>MyLover珠宝 璀璨星光钻石戒指，金18k镶嵌女钻戒 14号</h3>
 					<p class="p1">京 东 价 &nbsp;&nbsp;&nbsp;<u>￥3097.00</u><a>&nbsp;&nbsp;&nbsp;降价通知</a><span>累计评价<a>30+</a></span><br/><br/><i>促销</i></p>
 					<p>支持</p>
 					<p>配送至  北京null</p>
@@ -204,14 +271,34 @@
 					<em>温馨提示：支持七天无理由退换</em>
 				</div>
 			</div>
-		</div>
+			<div id="foot">
+					<div class="footl">
+						<h3>MyLover珠宝旗舰店</h3>
+						<p><span>9.58</span><a>商品评价  9.60<br/>商品评价  9.60<br/>商品评价  9.60</a></p>
+						<u>进店逛逛</u><u>关注店铺</u>
+					</div>
+					<div class="footr">
+						<p><h3>商品介绍</h3></p>
+						<ul>
+							<li>商品名称：<span>MyLover珠宝 心花怒放钻石戒指 梦想之星婚戒钻戒 群镶显钻结婚 专柜同款求婚女戒 白18K金 14号</span></li>
+							<li>货号：<span>H248#</span></li>
+							<li>颜色：<span>不分级</span></li>
+							<li>圈口：<span>13#-14#</span></li>
+							<li>主石重量：<span>10分以下</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="dibu"></div>
+		
 	</body>
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script>
 	$(function(){
-		$("#footer").load("top.html");
-		
+		$("#alltop").load("top.html");
+		$("#dibu").load("footer.html");
 		$("#contentl .oUl1 img").mouseenter(function(){
 			clearInterval(timer);
 		});
@@ -223,6 +310,10 @@
 		});
 		$("#contentl .oUl2 img").mouseleave(function(){
 			autoplay();
+		});
+		
+		$("#contentr #btn1").click(function(){
+			location = "http://127.0.0.1:8020/MyLover/gouwuche.html";
 		});
 		//小图的轮播
 		var oimg=box.getElementsByTagName("img")[0];
