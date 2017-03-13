@@ -56,7 +56,15 @@ li{
         }
     }
 }
-
+.gundong{
+    background:rgba(0,0,0,0.3);
+    width:218px;
+    height:30px;
+    position:absolute;
+    top:0;
+    left:5px;
+    display:none;
+}
 #conter{
     width:1000px;
     height:1720px;
@@ -70,6 +78,7 @@ li{
             padding:5px 5px;
             margin:5px 5px;
             float:left;
+            position:relative;
             border:solid 1px lightpink;
             dt{
                 width:208px;

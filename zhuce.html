@@ -121,6 +121,17 @@
 <script src="js/jquery-1.8.3.min.js"></script>
 <script>
 	$(function(){
+		
+		$(".zhuce").click(function(){
+			$.post("php/zhuce.php",
+			{
+				"userName":$(".name2").val(),
+				"userPass":$(".pwd2").val()
+			}
+				
+			)
+		});
+		
 		var m = parseInt(Math.random()*10000);
 			$(".content1 span").text(m);
 		$("#but1").click(function(){

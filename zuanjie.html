@@ -22,7 +22,7 @@
 							<dd>&nbsp;&nbsp;MyLover珠宝 璀璨星光钻石戒指，金18k镶嵌女钻戒 14号</dd>
 							<dd><p>只缘感君一回顾，使我思君朝与暮</p></dd>
 							<dd><i>￥2799.67</i></dd>
-							
+							<dd class="gundong"><marquee>MyLover精品钻戒</marquee></dd>
 							<span><a href="gouwuche.html">加入购物车</a></span>
 						</dl>
 						
@@ -32,6 +32,7 @@
 							<dd>&nbsp;&nbsp;MyLover珠宝 香槟协奏曲18k金钻石戒指 16号</dd>
 							<dd><p>执子之手 与子偕老</p></dd>
 							<dd><i>￥1886.15</i></dd>
+							<dd class="gundong"><marquee>MyLover精品钻戒</marquee></dd>
 							<span><a href="###">加入购物车</a></span>
 						</dl>
 						<dl>
@@ -228,6 +229,20 @@
 		$("#footer").load("footer.html");
 	});
 	
+	//--------------------
+	$(".conters dl").mouseenter(function(){
+			
+			
+			$(this).children(".gundong").css({
+				"display":"block"
+			});
+		});
+		
+		$(".conters dl").mouseleave(function(){
+			$(this).children(".gundong").css({
+				"display":"none"
+			});
+		});
 	
 	//
 	var list=document.getElementById("list");

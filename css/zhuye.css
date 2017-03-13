@@ -17,6 +17,19 @@ li {
   height: 3060px;
   margin: 0 auto; }
 
+#aside {
+  width: 49px;
+  height: 108px;
+  border: solid 1px #ccc;
+  position: fixed;
+  right: 20px;
+  bottom: 50px; }
+
+#aside li {
+  width: 49px;
+  height: 54px;
+  background: #0f0; }
+
 #banner {
   width: 990px;
   height: 500px;

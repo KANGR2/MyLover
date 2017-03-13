@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>测试放大镜</title>
+		<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		a{
+    		text-decoration:none;
+		}
+		li{
+   			list-style:none;
+		}
+		#box{
+			width:100%;
+			height:980px;
+		}
+		#content{
+			width:1100px;
+			height:520px;
+			margin:0 auto;
+			border-bottom:solid 1px #ccc;
+		}
+		#contentl{
+			width:350px;
+			height:500px;
+			float:left;
+			overflow:hidden;
+		}
+		/*.contentls{
+			width:345px;
+			height:345px;
+			overflow:hidden;
+			border:solid 1px #ccc;
+		}*/
+		#contentl .oUl1{
+			width:350px;
+			height:345px;
+			float:left;
+			overflow:hidden;
+			border:solid 1px #ccc;
+			position:relative;
+		}
+		#contentl .oUl1 li{
+			width:350px;
+			height:345px;
+			float:left;
+			position:absolute;
+		}
+		
+		#contentl img{
+			width:100%;
+		}
+		#contentl .pop{
+			width:175px;
+			height:172px;
+			position:absolute;
+			background:rgba(0,0,0,0.3);
+			left:0;
+			top:0;
+			cursor:move;
+		}
+		#content .bigPic{
+			width:350px;
+			height:345px;
+			border:solid 1px #f00;
+			float:left;
+			overflow:hidden;
+			/*position:relative;*/
+		}
+		#content .bigPic img{
+			position:relative;
+			left:0;
+			top:0;
+		}
+		
+		
+		#contentl .oUl2{
+			width:350px;
+			height:70px;
+			margin-top:345px;
+		}
+		#contentl .oUl2 li{
+			width:50px;
+			height:50px;
+			margin:8px;
+			float:left;
+		}
+		#contentl p{
+			width:330px;
+			color:#666;
+			margin-top:20px;
+			padding-left:10px;
+		}
+		#contentl u{
+			float:right;
+			text-decoration: none;
+			margin-right:10px;
+		}
+		.active{
+			border:solid 1px #f00;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="alltop"></div>
+			<div id="content">
+				<div id="contentl">
+					
+					<ul class="oUl1">
+						<img src="img/c0.PNG" />
+						<div class="pop"></div>
+					</ul>
+					
+					
+					
+					
+					
+					
+					<!--<ul class="oUl2">
+						<li class="active"><img src="img/tp58.jpg" /></li>
+						<li><img src="img/tp59.jpg" /></li>
+						<li><img src="img/tp60.jpg" /></li>
+						<li><img src="img/tp61.jpg" /></li>
+						<li><img src="img/tp62.jpg" /></li>
+					</ul>
+					
+					<p><a>❤关注&nbsp;&nbsp;&nbsp;</a><span>分享</span><u>举报</u></p>-->
+				</div>
+				<div class="bigPic">
+						<img src="img/c0.PNG" />
+					</div>
+				<!--<div id="contentr">
+					<h3>MyLover珠宝 璀璨星光钻石戒指，金18k镶嵌女钻戒 14号</h3>
+					<p class="p1">京 东 价 &nbsp;&nbsp;&nbsp;<u>￥3097.00</u><a>&nbsp;&nbsp;&nbsp;降价通知</a><span>累计评价<a>30+</a></span><br/><br/><i>促销</i></p>
+					<p>支持</p>
+					<p>配送至  北京null</p>
+					<p class="p2">
+						选择手寸 <a href="###">12号</a><a href="###">14号</a><a href="###">15号</a><a href="###">13号</a><a href="###">10号</a><a href="###">9号</a><a href="###">16号</a><a href="###">11号</a><a href="###">8号</a><a href="###">10号</a><a href="###">17号</a>
+					</p>
+					<b class="f1">
+						1<input type="button" value="+" /><br />
+						<input type="button" value="-" />
+					</b>
+					<input type="button" value="加入购物车" id="btn1" />
+					<input type="button" value="立即购买" id="btn1" />
+					<br />
+					<em>温馨提示：支持七天无理由退换</em>
+				</div>-->
+			</div>
+		</div>
+		
+	</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/base.js"></script>
+<script>
+	var oUl1 = getClass("oUl1")[0];
+	var pop = getClass("pop")[0];
+	var big = getClass("bigpic")[0];
+	var bigpic = big.getElementsByTagName("img")[0];
+	var w = 350,h = 345;
+	var oW = 175,oH = 172;
+	var bigw = 700,bigh = 690;
+	
+	//放大效果
+		//鼠标移动
+			oUl1.onmousemove = function(evt){
+				var e = evt || event;
+			//	oPop.style.left = e.clientX-oGoods.offsetLeft-oW/2+"px";
+			//	oPop.style.top = e.clientY-oGoods.offsetTop-oH/2+"px";
+				var l,t;
+				//左边界
+				if(e.clientX-oUl1.offsetLeft<oW/2){
+					l=0;
+				}
+				//右边界
+				else if(e.clientX-oUl1.offsetLeft>(w-oW/2)){
+					l = w - oW;
+				}
+				//中间
+				else{
+					l = e.clientX-oUl1.offsetLeft-oW/2;
+				}
+				
+				//上边界
+				if(e.clientY-oUl1.offsetTop<oH/2){
+					t=0;
+				}
+				//下边界
+				else if(e.clientY-oUl1.offsetTop>(h-oH/2)){
+					t = h - oH;
+				}
+				//中间
+				else{
+					t = e.clientY-oUl1.offsetTop-oH/2;
+				}
+				pop.style.left = l+"px";
+				pop.style.top = t+"px";
+				
+				bigpic.style.left = (-1)*l*bigw/w+"px";
+				bigpic.style.top = (-1)*t*bigh/h+"px";
+			}
+		
+		
+	$(function(){
+		
+//		//放大效果
+//		//鼠标移动
+//		$(".oUl1").mousemove(function(evt){
+//			var e = evt || event;
+//			//左边界
+//				if(e.clientX-$(".oUl1").offsetLeft<oW/2){
+//					l=0;
+//				}
+//				//右边界
+//				else if(e.clientX-$(".oUl1").offsetLeft>(w-oW/2)){
+//					l = w - oW;
+//				}
+//				//中间
+//				else{
+//					l = e.clientX-$(".oUl1").offsetLeft-oW/2;
+//				}
+//				
+//				//上边界
+//				if(e.clientY-oUl1.offsetTop<oH/2){
+//					t=0;
+//				}
+//				//下边界
+//				else if(e.clientY-oUl1.offsetTop>(h-oH/2)){
+//					t = h - oH;
+//				}
+//				//中间
+//				else{
+//					t = e.clientY-oUl1.offsetTop-oH/2;
+//				}
+//				
+//				$(".pop").style.left = l+"px";
+//				$(".pop").style.top = t+"px";
+//				
+//				$(".bigPic").style.left = (-1)*l*bigW/w+"px";
+//				$(".bigPic").style.top = (-1)*t*bigH/h+"px";
+//		});
+		
+		
+		
+		
+		//-----------------------------------
+		$("#alltop").load("top.html");
+		$("#dibu").load("footer.html");
+		$("#contentl .oUl1 img").mouseenter(function(){
+			clearInterval(timer);
+		});
+		$("#contentl .oUl1 img").mouseleave(function(){
+			autoplay();
+		});
+		$("#contentl .oUl2 img").mouseenter(function(){
+			clearInterval(timer);
+		});
+		$("#contentl .oUl2 img").mouseleave(function(){
+			autoplay();
+		});
+		
+		$("#contentr #btn1").click(function(){
+			location = "http://127.0.0.1:8020/MyLover/gouwuche.html";
+		});
+		//小图的轮播
+//		var oimg=box.getElementsByTagName("img")[0];
+//		var oLi = document.getElementsByClassName("oUl2")[0].getElementsByTagName("li");
+//		var m=0;
+//		var timer;
+//		function autoplay(){
+//			timer = setInterval (function(){
+//					m++;
+//					if(m==5){
+//						m=0;
+//					}
+//					for(var i=0;i<oLi.length;i++){
+//						oLi[i].className = "";
+//					}
+//					oLi[m].className = "active";
+//					oimg.src="img/c"+m+".PNG";	
+//			},2000);
+//		}
+//		autoplay();
+//		for(var j=0;j<oLi.length;j++){
+//			oLi[j].index = j;
+//			oLi[j].onmouseover = function(){
+//				for(var i=0;i<oLi.length;i++){
+//					oLi[i].className = "";
+//				}
+//				this.className = "active";
+//				m = this.index;
+//				oimg.src="img/c"+m+".PNG";	
+//			}
+//		}
+		
+		
+			
+	});
+</script>
